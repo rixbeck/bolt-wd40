@@ -16,6 +16,9 @@
         ]
     },
     "license": "MIT",
+    "scripts": {
+        "post-install": "Bolt\\Composer\\ScriptHandler::installThemesAndFiles"
+    },
     "authors": [
         {
             "name": "Rix Beck",
