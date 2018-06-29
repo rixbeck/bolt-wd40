@@ -48,7 +48,16 @@ so we can invoke our Bolt CMS dragster server as
 ```bash  
 ./vendor/php-pm/php-pm/bin/ppm start --config=./app/config/ppm/ppm.json
 ```
-  
+
+PHP-PM and its workers are easily set up for debugging as PM document describes. In this case just use 
+
+```
+./app/config/ppm/ppm-test.json
+```
+
+as process manager config. That's ensure for logging to console and only one worker for less confusion.
+See other configuration options to customizing for your needs.
+
 ## Surprises?
 
 I'm almost sure they're coming. Not just because this is a real experimental project but rather we may have things in Bolt
@@ -76,6 +85,7 @@ memory leaks - which is PHP's most notorious attribution - we will see at work o
 
 ## Collaboration
 
-I would be glad if this project would be a sort of "heads up" for other Bolters and join just for fun. 
+I would be glad if this project would be a sort of "heads up" for other Bolters and join just for fun.
+
   
     
