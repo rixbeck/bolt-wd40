@@ -1,0 +1,18 @@
+{
+    "bridge": "HttpKernel",
+    "host": "127.0.0.1",
+    "port": 8088,
+    "workers": 1,
+    "app-env": "ppm",
+    "debug": 1,
+    "logging": 1,
+    "static-directory": ".",
+    "bootstrap": "WD40\\PHPPM\\Bootstraps\\Silex",
+    "processmanager": "WD40\\PHPPM\\ProcessManager",
+    "max-requests": 1000,
+    "populate-server-var": true,
+    "socket-path": ".ppm\/run\/",
+    "pidfile": ".ppm\/ppm.pid",
+    "reload-timeout": 30,
+    "cgi-path": "\/usr\/bin\/php-cgi7.0"
+}
