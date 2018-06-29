@@ -17,7 +17,7 @@
     },
     "license": "MIT",
     "scripts": {
-        "post-install": "Bolt\\Composer\\ScriptHandler::installThemesAndFiles"
+        "post-update-cmd": "WD40\\Composer\\ScriptHandler::installResources"
     },
     "authors": [
         {
