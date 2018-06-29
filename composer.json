@@ -1,0 +1,25 @@
+{
+    "name": "rixbeck/bolt-wd40",
+    "description": "Rust remover for Bolt CMS ",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {
+        "php-pm/php-pm": "^1.0",
+        "php-pm/httpkernel-adapter": "^1.0",
+        "bolt/bolt": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "WD40\\": "src"
+        },
+        "files": [
+        ]
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rix Beck",
+            "email": "rix@boltcms.hu"
+        }
+    ]
+}
