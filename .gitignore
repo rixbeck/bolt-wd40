@@ -108,10 +108,8 @@ local.properties
 
 # Bolt specific
 
-/.bolt.yml
 /.htaccess
 /.ppm/
-/index.php
 /bolt-public/
 /extensions/
 /files/
