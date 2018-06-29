@@ -111,7 +111,6 @@ local.properties
 /.htaccess
 /.ppm/
 /bolt-public/
-/extensions/
 /files/
 /theme/
 /vendor/

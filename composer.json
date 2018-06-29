@@ -5,7 +5,7 @@
     "minimum-stability": "dev",
     "require": {
         "php-pm/php-pm": "^1.0",
-        "php-pm/httpkernel-adapter": "^1.0",
+        "php-pm/httpkernel-adapter": "1.0.2",
         "bolt/bolt": "^3.5"
     },
     "autoload": {
