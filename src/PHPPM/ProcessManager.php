@@ -1,5 +1,5 @@
 <?php
-declare(ticks=1);
+declare(ticks = 1);
 
 namespace WD40\PHPPM;
 
@@ -44,9 +44,12 @@ class ProcessManager extends \PHPPM\ProcessManager
         $pcntl->on(SIGUSR2, [$this, 'reloadSlaves']);
 
         if ($this->isDebug()) {
-            $this->loop->addPeriodicTimer(0.5, function () {
-                $this->checkChangedFiles();
-            });
+            $this->loop->addPeriodicTimer(
+                0.5,
+                function () {
+                    $this->checkChangedFiles();
+                }
+            );
         }
 
         $loopClass = (new \ReflectionClass($this->loop))->getShortName();
@@ -56,13 +59,30 @@ class ProcessManager extends \PHPPM\ProcessManager
 
         $this->createSlaves();
 
-        $this->loop->addPeriodicTimer(2, function () {
-            $this->checkChangedConfigs();
-        });
+        $this->loop->addPeriodicTimer(
+            2,
+            function () {
+                $this->checkChangedConfigs();
+            }
+        );
 
         $this->fsMonitorStart();
 
         $this->loop->run();
+    }
+
+    public function restartSlaves($graceful = false)
+    {
+        if ($this->inRestart) {
+            return;
+        }
+
+        $this->inRestart = true;
+
+        $this->closeSlaves($graceful);
+        $this->createSlaves();
+
+        $this->inRestart = false;
     }
 
     /**
