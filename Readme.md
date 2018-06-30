@@ -28,6 +28,22 @@ Git, Composer and so on.
 
 ## And now...
 
+If you want to live with instant reload of Bolt's config files under a running server in Linux environment you should install
+
+```bash
+apt install inotify-tools
+```
+
+or under Mac
+
+```bash
+# MacPorts
+$ port install fswatch
+
+# Homebrew
+$ brew install fswatch
+```
+
 Checkout and prepare your WD40
 
 ```bash
